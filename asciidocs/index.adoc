@@ -44,9 +44,9 @@ git remote add origin <link des Repos>
 git push origin main
 -----
 
-=== Erstellen des pirvate key und public Key
+=== Erstellen des private key und public Key
 
-*+ In folgenden Schritten erstellen wir einen public Key. In GitHub schreiben wir diesen ein, um die Authentifizierung bei einem commit zu überspringen.
+** In folgenden Schritten erstellen wir einen public Key. In GitHub schreiben wir diesen ein, um die Authentifizierung bei einem commit zu überspringen.
 
 -----
 #in das home Verzeichnis wechseln
