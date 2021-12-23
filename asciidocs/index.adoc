@@ -18,7 +18,55 @@ ifdef::backend-html5[]
 
 ===  GitHub Repo erstellen
 
-image::images/create-new.png[]
+** Auf den Grünen Button klicken um ein Repo zu erstellen.
+image:images/create-new.png[]
 
-=== Header 2
+** Eindeutigen Namen wählen und Public auwählen danach auf Create respository klicken.
+image:images/first-steps.png[]
+
+=== Locales-Repo und Remote-Verbindung zu Github einrichten
+
+-----
+#erstellen eines ordners
+mkdir github-lab
+#in den Ordner wechseln
+cd github-lab/
+#.git Ordner erstellen
+git init
+#erstellen eines README.md Files
+echo "# 3BHITM-github-lab-branches" >> README.md
+#folgende Schritte abarbeiten
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git push origin main
+git remote add origin <link des Repos>
+git push origin main
+-----
+
+=== Erstellen des pirvate key und public Key
+
+*+ In folgenden Schritten erstellen wir einen public Key. In GitHub schreiben wir diesen ein, um die Authentifizierung bei einem commit zu überspringen.
+
+-----
+#in das home Verzeichnis wechseln
+cd /home
+#Key mit command generieren
+ssh-keygen -t rsa
+#in .ssh Verzeichnis wechseln
+cd .ssh
+#de id_rsa.pub Key in einem Editor öffnen und kopieren
+gedit id_rsa.pub
+-----
+.den rsa_rsa.pub Key in GitHub einfügen
+[%collapsible]
+====
+*** Klicken Sie auf ihren Account und danach auf Settings
+image:images/account-settings.png[]
+*** Nun gehen Sie auf der Linken Seite auf "SSH and GPG keys"
+image:images/left-navbar.png[]
+*** Jetzt fügen Sie den Key mit "New SSH key" hinzu
+image:images/rsa-key.png[]
+====
+
 
